@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Your title here</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <script type="text/javascript">
+        const creator = new URLSearchParams(window.location.search).get('creator');
+        const viewer = new URLSearchParams(window.location.search).get('viewer');
+        if (viewer) {
+            document.title = creator + ' - ' + viewer;
+        }
+    </script>
+    <script src="lottie-player.js"></script>
+    <lottie-player src="data.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
+  </body>
+</html>
